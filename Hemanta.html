@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif; /* Use Times New Roman font */
+        }
+        .tab {
+            overflow: hidden;
+            border-bottom: 1px solid #ccc;
+        }
+        .tab button {
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button.active {
+            background-color: #ccc;
+        }
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+            text-align: center; /* Center align the content */
+        }
+        .tabcontent img {
+            width: 200px; /* Adjust width as needed */
+            height: auto;  /* Maintains aspect ratio */
+            border-radius: 50%; /* Makes the image round */
+            margin-top: 10px;
+            margin-left: auto; /* Center the image horizontally */
+            margin-right: auto; /* Center the image horizontally */
+            display: block; /* Ensure the image is displayed as a block element */
+        }
+    </style>
+</head>
+<body>
+
+<h2>Welcome to Hemanta's Home Page</h2>
+
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'AboutMe')" id="defaultOpen">About Me</button>
+    <button class="tablinks" onclick="openTab(event, 'Education')">Education</button>
+    <button class="tablinks" onclick="openTab(event, 'ResearchInterest')">Research Interest</button>
+    <button class="tablinks" onclick="openTab(event, 'Experience')">Experience</button>
+    <button class="tablinks" onclick="openTab(event, 'Publications')">Publications</button>
+    <button class="tablinks" onclick="openTab(event, 'Miscellaneous')">Miscellaneous</button>
+</div>
+
+<div id="AboutMe" class="tabcontent">
+    <h3>About Me</h3>
+    <img src="gate.jpg" alt="Profile Picture" class="profile-pic">
+     <p>Hello! I'm Hemanta Hazarika, a dedicated researcher specializing in Control Systems. Currently, I am pursuing my PhD at the prestigious Indian Institute of Technology (IIT) Bombay, where I focus on the intricate field of network dynamical descriptor systems. My research aims to enhance the understanding and application of control mechanisms within complex networked systems, which has far-reaching implications across various technological and engineering domains.<p>
+
+<p> Beyond my academic pursuits, I am passionate about robotics, particularly in developing biologically inspired robots. One of my key interests lies in creating snake robots, which emulate the unique locomotion of real snakes. These robots have potential applications in search and rescue operations, medical procedures, and inspection tasks in hazardous environments, showcasing the intersection of biology and advanced robotics.<p>
+
+<p>I am enthusiastic about collaborating with fellow researchers, industry professionals, and academic peers to further the development and application of advanced control systems and innovative robotic technologies.</p>
+
+</div>
+
+
+<div id="Education" class="tabcontent">
+    <h3>Education</h3>
+    <ul class="education-list">
+        <li>
+            <strong>PhD in Control and Computing, Electrical Enginerring</strong><br>
+            Indian Institute of Technology Bombay (IIT Bombay)<br>
+            Control and Computing Group<br>
+            Started in 2020
+        </li>
+        <li>
+            <strong>Master of Technology (M.Tech.) in Control Systems</strong><br>
+            National Institute of Technology, Kurukshetra<br>
+            Electrical Engineering Department<br>
+            Graduated in 2020 with a CGPA of 8.9838
+        </li>
+        <li>
+            <strong>Bachelor of Engineering (B.E.)</strong><br>
+            Assam Engineering College<br>
+            Graduated in 2017<br>
+            Ranked 2nd in the university
+        </li>
+    </ul>
+</div>
+
+
+<div id="ResearchInterest" class="tabcontent">
+    <h3>Research Interest</h3>
+    </div>
+
+<div id="Experience" class="tabcontent">
+    <h3>Experience</h3>
+    
+</div>
+
+<div id="Publications" class="tabcontent">
+    <h3>Publications</h3>
+   </div>
+
+<div id="Miscellaneous" class="tabcontent">
+    <h3>Miscellaneous</h3>
+    
+</div>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Automatically click on the "defaultOpen" tab to open it by default
+    document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
+
+
+
+
+
